@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-17T15:49:55 EST" name="Default Suite" finished-at="2024-01-17T15:50:09 EST" duration-ms="14431">
+    <groups>
+    </groups>
+    <test started-at="2024-01-17T15:49:55 EST" name="Comcast" finished-at="2024-01-17T15:50:09 EST" duration-ms="14431">
+      <class name="tests.SignInTest">
+        <test-method is-config="true" signature="baseSetUp()[pri:0, instance:tests.SignInTest@319b92f3]" started-at="2024-01-17T15:49:55 EST" name="baseSetUp" finished-at="2024-01-17T15:49:59 EST" duration-ms="4460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseSetUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SignInTest@319b92f3]" started-at="2024-01-17T15:49:59 EST" name="setUp" finished-at="2024-01-17T15:49:59 EST" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test101(java.lang.String)[pri:0, instance:tests.SignInTest@319b92f3]" started-at="2024-01-17T15:49:59 EST" name="test101" description="Validate text is display when log in with wrong email" data-provider="email" finished-at="2024-01-17T15:50:09 EST" duration-ms="9753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[meredith.tremblay@hotmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test101 -->
+        <test-method is-config="true" signature="tearDownAll()[pri:0, instance:tests.SignInTest@319b92f3]" started-at="2024-01-17T15:50:09 EST" name="tearDownAll" finished-at="2024-01-17T15:50:09 EST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAll -->
+      </class> <!-- tests.SignInTest -->
+    </test> <!-- Comcast -->
+  </suite> <!-- Default Suite -->
+</testng-results>
