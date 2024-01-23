@@ -3,6 +3,8 @@ package tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -31,8 +33,10 @@ public class BaseTest
     @BeforeMethod(alwaysRun = true)
     public void baseSetUp(Method method)
     {
-        WebDriverManager.chromedriver().setup(); // The WebDriverManager dependency that work as
+        //WebDriverManager.chromedriver().setup(); // The WebDriverManager dependency that work as
 //        System.setProperty("webdriver.chrome.driver", path);
+        initializeDriver(ConfigReader.readProperty("configuration.properties", "browser"));
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -53,5 +57,23 @@ public class BaseTest
     public void closeReporter()
     {
         reportManager.closeReporter();
+    }
+
+    private void initializeDriver(String browser)
+    {
+        switch (browser) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            case "ie":
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
+                break;
+        }
     }
 }
