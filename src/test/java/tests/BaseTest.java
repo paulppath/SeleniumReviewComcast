@@ -19,6 +19,7 @@ public class BaseTest
 
 //    String path = ConfigReader.readProperty("configuration.properties", "path");
 //    String path = "/Users/paulppath/Desktop/Selenium/libs/drivers/chromedriver";
+
     WebDriver driver;
     protected static ExtentManager reportManager;
     @BeforeSuite(alwaysRun = true)

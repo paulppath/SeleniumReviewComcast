@@ -80,4 +80,5 @@ public class BasePage extends BaseTest
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView(true)", element);
     }
+
 }

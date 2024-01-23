@@ -84,7 +84,6 @@ public class HomeTest extends BaseTest
         test.pass(MarkupHelper.createLabel("Pass with highlight", ExtentColor.AMBER));
 
         extent.flush();
-
     }
     @Test (testName = "US0021 Get quote (improve)", description = "Improve version of Get quote test")
     public void test02_2()

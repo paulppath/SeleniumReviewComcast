@@ -31,4 +31,5 @@ public class HomePage extends BasePage
     public WebElement helpFullHeader;
     @FindBy(xpath = "//a[@id='bx-close-inside-2449058']")
     public WebElement promoBarCloseBtn;
+
 }

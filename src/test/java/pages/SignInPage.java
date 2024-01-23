@@ -15,4 +15,5 @@ public class SignInPage extends BasePage
     }
     @FindBy(xpath = "//span[text()='Sign In']")
     public WebElement signInBtn;
+
 }
